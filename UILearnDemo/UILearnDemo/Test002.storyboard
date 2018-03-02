@@ -18,21 +18,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="picTest" translatesAutoresizingMaskIntoConstraints="NO" id="Nif-y4-15o">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="picTest001" translatesAutoresizingMaskIntoConstraints="NO" id="Nif-y4-15o">
                                 <rect key="frame" x="67" y="269" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5F-Sv-NNB">
+                                <rect key="frame" x="0.0" y="411" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.87014702036507674" blue="0.43091882543614446" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="执行帧动画"/>
+                                <connections>
+                                    <action selector="clickAnim" destination="EoF-dh-GqQ" eventType="touchUpInside" id="69k-qd-bhr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOt-7G-oOF">
+                                <rect key="frame" x="127" y="411" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="暂停音乐"/>
+                                <connections>
+                                    <action selector="stopMusic" destination="EoF-dh-GqQ" eventType="touchUpInside" id="FoB-Z8-zbB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5k-Vu-abr">
+                                <rect key="frame" x="224" y="411" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="切换音乐"/>
+                                <connections>
+                                    <action selector="changeMusic" destination="EoF-dh-GqQ" eventType="touchUpInside" id="3QW-SQ-rVG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2Hy-JL-l9x"/>
                     </view>
+                    <connections>
+                        <outlet property="mImageView" destination="Nif-y4-15o" id="a3q-DD-8Cw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A0v-vA-lpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="162"/>
+            <point key="canvasLocation" x="-207.19999999999999" y="161.46926536731635"/>
         </scene>
     </scenes>
     <resources>
-        <image name="picTest" width="542" height="798"/>
+        <image name="picTest001" width="542" height="798"/>
     </resources>
 </document>

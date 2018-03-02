@@ -17,6 +17,11 @@
 		4A39E0B7204804A4000AB384 /* Test002ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A39E0B1204804A3000AB384 /* Test002ViewController.m */; };
 		4A39E0B8204804A4000AB384 /* Test001.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A39E0B2204804A3000AB384 /* Test001.storyboard */; };
 		4A39E0B9204804A4000AB384 /* Test001ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A39E0B4204804A3000AB384 /* Test001ViewController.m */; };
+		4A440D8920492B53004362A8 /* mySong3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D8620492B53004362A8 /* mySong3.mp3 */; };
+		4A440D8A20492B54004362A8 /* mySong2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D8720492B53004362A8 /* mySong2.mp3 */; };
+		4A440D8B20492B54004362A8 /* mySong1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D8820492B53004362A8 /* mySong1.mp3 */; };
+		4A440D9020492FA3004362A8 /* picTest004.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D8F20492FA3004362A8 /* picTest004.png */; };
+		4A440D9220492FE0004362A8 /* picTest003.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D9120492FE0004362A8 /* picTest003.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		4A39E0B3204804A3000AB384 /* Test001ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test001ViewController.h; sourceTree = "<group>"; };
 		4A39E0B4204804A3000AB384 /* Test001ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test001ViewController.m; sourceTree = "<group>"; };
 		4A39E0B5204804A3000AB384 /* Test002ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test002ViewController.h; sourceTree = "<group>"; };
+		4A440D8620492B53004362A8 /* mySong3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mySong3.mp3; sourceTree = "<group>"; };
+		4A440D8720492B53004362A8 /* mySong2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mySong2.mp3; sourceTree = "<group>"; };
+		4A440D8820492B53004362A8 /* mySong1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mySong1.mp3; sourceTree = "<group>"; };
+		4A440D8F20492FA3004362A8 /* picTest004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picTest004.png; sourceTree = "<group>"; };
+		4A440D9120492FE0004362A8 /* picTest003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picTest003.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +92,30 @@
 				4A39E09920480409000AB384 /* Assets.xcassets */,
 				4A39E09B20480409000AB384 /* LaunchScreen.storyboard */,
 				4A39E09E20480409000AB384 /* Info.plist */,
+				4A440D8C20492BA2004362A8 /* 图片 */,
+				4A440D8520492B53004362A8 /* 音乐 */,
 				4A39E09F20480409000AB384 /* main.m */,
 			);
 			path = UILearnDemo;
+			sourceTree = "<group>";
+		};
+		4A440D8520492B53004362A8 /* 音乐 */ = {
+			isa = PBXGroup;
+			children = (
+				4A440D8620492B53004362A8 /* mySong3.mp3 */,
+				4A440D8720492B53004362A8 /* mySong2.mp3 */,
+				4A440D8820492B53004362A8 /* mySong1.mp3 */,
+			);
+			path = "音乐";
+			sourceTree = "<group>";
+		};
+		4A440D8C20492BA2004362A8 /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+				4A440D9120492FE0004362A8 /* picTest003.png */,
+				4A440D8F20492FA3004362A8 /* picTest004.png */,
+			);
+			path = "图片";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,10 +176,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A440D9220492FE0004362A8 /* picTest003.png in Resources */,
+				4A440D8A20492B54004362A8 /* mySong2.mp3 in Resources */,
 				4A39E09D20480409000AB384 /* LaunchScreen.storyboard in Resources */,
+				4A440D8B20492B54004362A8 /* mySong1.mp3 in Resources */,
 				4A39E0B8204804A4000AB384 /* Test001.storyboard in Resources */,
 				4A39E09A20480409000AB384 /* Assets.xcassets in Resources */,
+				4A440D9020492FA3004362A8 /* picTest004.png in Resources */,
 				4A39E09820480409000AB384 /* Main.storyboard in Resources */,
+				4A440D8920492B53004362A8 /* mySong3.mp3 in Resources */,
 				4A39E0B6204804A4000AB384 /* Test002.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
