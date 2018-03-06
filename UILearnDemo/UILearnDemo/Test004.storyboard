@@ -21,13 +21,28 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aze-VJ-qJE">
                                 <rect key="frame" x="62" y="208" width="250" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="picTest001" translatesAutoresizingMaskIntoConstraints="NO" id="4OP-1X-sOc">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="delegate" destination="TaU-4d-Jkm" id="oxo-Iz-V0r"/>
+                                </connections>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="fP5-dq-deB">
+                                <rect key="frame" x="152" y="420" width="71" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="66k-u0-oRO"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="4OP-1X-sOc" id="ScE-4n-HAK"/>
+                        <outlet property="pageControl" destination="fP5-dq-deB" id="flL-eL-PBE"/>
                         <outlet property="scrollView" destination="Aze-VJ-qJE" id="sV5-nc-Ab6"/>
                     </connections>
                 </viewController>
@@ -36,4 +51,7 @@
             <point key="canvasLocation" x="-242.40000000000001" y="110.19490254872565"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="picTest001" width="542" height="798"/>
+    </resources>
 </document>

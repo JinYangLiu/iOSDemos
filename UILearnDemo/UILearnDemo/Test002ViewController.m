@@ -17,6 +17,8 @@
 
 @property(nonatomic,strong)NSArray *images;
 
+@property(nonatomic,strong)NSString *inputHint;
+
 @property (weak, nonatomic) IBOutlet UITextField *textFied;
 
 @end
@@ -36,9 +38,19 @@
     [self addImageView];
    //UIButton的使用
     [self addButton];
-    
+    //设置textField监听（UITextFieldDelegate）
     self.textFied.delegate=self ;
+    /*
+    [self.textFied addTarget:self action:@selector(tfEditingDidBegin) forControlEvents:UIControlEventEditingDidBegin];
+    [self.textFied addTarget:self action:@selector(tfEditingChanged:) forControlEvents:UIControlEventEditingChanged];
+    [self.textFied addTarget:self action:@selector(tfEditingDidEnd) forControlEvents:UIControlEventEditingDidEnd];
+     */
     
+    ////hint step1，弹出键盘前的设置
+    self.inputHint=self.textFied.text=[NSString stringWithFormat:@"请输入数字1之外的字符"];
+    self.textFied.textColor=[UIColor lightGrayColor];
+    //调起键盘
+//    [self.textFied becomeFirstResponder];
    
     
 }
@@ -84,7 +96,7 @@
     UIImageView *imageView=[[UIImageView alloc]init];
     //设置位置尺寸
     //方式1.
-    imageView.frame=CGRectMake(30, 30, 300, 200);
+    imageView.frame=CGRectMake(20, 20, 300, 180);
     //方式2.
     //    imageView.frame=(CGRect){{50,50},{200,300}};
     //方式3.
@@ -379,12 +391,23 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     NSLog(@"开始编辑");
+    //hint step2
+    if (self.inputHint && self.inputHint.length>0) {
+        textField.text=@"";
+        textField.textColor=[UIColor redColor];
+        self.inputHint=nil;
+    }
 }
 
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     NSLog(@"结束编辑");
+    //hint step3
+    if (textField.text.length==0) {
+        self.inputHint=textField.text=[NSString stringWithFormat:@"请输入数字1之外的字符"];
+        textField.textColor=[UIColor lightGrayColor];
+    }
 }
 
 /**
@@ -393,17 +416,13 @@
  *
  *  @return YES:允许用户输入;NO:禁止用户输入
  */
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
     NSLog(@"shouldChangeCharactersInRange--%@",string);
     if ([string isEqualToString:@"1"]) {
         return NO;
     }
     return YES;
 }
-
-
-
-
 
 @end
