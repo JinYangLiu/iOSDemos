@@ -21,6 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="picTest001" translatesAutoresizingMaskIntoConstraints="NO" id="Nif-y4-15o">
                                 <rect key="frame" x="67" y="269" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5F-Sv-NNB">
                                 <rect key="frame" x="0.0" y="411" width="106" height="30"/>
@@ -45,6 +46,54 @@
                                 <state key="normal" title="切换音乐"/>
                                 <connections>
                                     <action selector="changeMusic" destination="EoF-dh-GqQ" eventType="touchUpInside" id="3QW-SQ-rVG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2g-ZQ-pU4">
+                                <rect key="frame" x="16" y="508" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="平移"/>
+                                <connections>
+                                    <action selector="translationAnim" destination="EoF-dh-GqQ" eventType="touchUpInside" id="Ynx-ss-Is8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmI-D1-XtO">
+                                <rect key="frame" x="78" y="508" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="缩放"/>
+                                <connections>
+                                    <action selector="scralAnim" destination="EoF-dh-GqQ" eventType="touchUpInside" id="qLu-cl-lz2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QL5-vB-c31">
+                                <rect key="frame" x="143" y="508" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="透明"/>
+                                <connections>
+                                    <action selector="alphaAnim" destination="EoF-dh-GqQ" eventType="touchUpInside" id="HDs-k7-toi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvI-ag-G4z">
+                                <rect key="frame" x="210" y="508" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="添加拉伸图片"/>
+                                <connections>
+                                    <action selector="addBgImg" destination="EoF-dh-GqQ" eventType="touchUpInside" id="zbW-Fc-UAm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdU-S9-WCg">
+                                <rect key="frame" x="16" y="565" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="kvc"/>
+                                <connections>
+                                    <action selector="kvcClick:" destination="EoF-dh-GqQ" eventType="touchUpInside" id="UUG-X7-TLy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZW-9j-6M3">
+                                <rect key="frame" x="84" y="565" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="监听器"/>
+                                <connections>
+                                    <action selector="listenerClick:" destination="EoF-dh-GqQ" eventType="touchUpInside" id="mJU-cg-OKg"/>
                                 </connections>
                             </button>
                         </subviews>

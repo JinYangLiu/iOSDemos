@@ -28,27 +28,75 @@
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //初始化数据
+    [self initData];
     //UIImageView使用：
+    [self addImageView];
+   //UIButton的使用
+    [self addButton];
+    
+   
+    
+}
+
+/**
+ 1.系统调用
+ 2.控制器收到内存警告时调用
+ 3.去除一些不必要的内存占用，去除耗时的内存
+ */
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+
+/**
+ 初始化数据
+ */
+-(void)initData{
+    //加载所有图片
+    NSMutableArray<UIImage *> *images=[NSMutableArray array];
+    for (int i=0; i<4; i++) {
+        NSString *imageName=[NSString stringWithFormat:@"picTest00%d",i+1];
+        UIImage *image=[UIImage imageNamed:imageName];
+        [images addObject:image];
+    }
+    self.images=images;
+    
+    //初始化音乐播放器
+    //    NSString *musicPath=[[NSBundle mainBundle]pathForResource:@"mySong1.mp3" ofType:nil];
+    //    NSLog(@"musicPath=%@",musicPath);
+    //    NSURL *url=[NSURL fileURLWithPath:musicPath];
+    NSURL *url=[[NSBundle mainBundle]URLForResource:@"mySong1.mp3" withExtension:nil];
+    AVPlayerItem *playerItem=[[AVPlayerItem alloc]initWithURL:url];
+    self.player=[[AVPlayer alloc]initWithPlayerItem:playerItem];
+}
+
+
+/**
+ ImageView的使用
+ */
+-(void)addImageView{
     //创建
     UIImageView *imageView=[[UIImageView alloc]init];
     //设置位置尺寸
     //方式1.
     imageView.frame=CGRectMake(30, 30, 300, 200);
     //方式2.
-//    imageView.frame=(CGRect){{50,50},{200,300}};
+    //    imageView.frame=(CGRect){{50,50},{200,300}};
     //方式3.
-//    UIImage *image=[UIImage imageNamed:@"picTest002"];
-//    imageView.frame=CGRectMake(0, 0, image.size.width, image.size.height);
-//    imageView.image=image;
+    //    UIImage *image=[UIImage imageNamed:@"picTest002"];
+    //    imageView.frame=CGRectMake(0, 0, image.size.width, image.size.height);
+    //    imageView.image=image;
     //方式4.
-//    UIImage *image=[UIImage imageNamed:@"picTest002"];
-//    UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 10, image.size.width, image.size.height)];
-//    imageView.image=image;
+    //    UIImage *image=[UIImage imageNamed:@"picTest002"];
+    //    UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 10, image.size.width, image.size.height)];
+    //    imageView.image=image;
     //方式5.
-//    UIImageView *imageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"picTest002"]];
-//    imageView.center=CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.5);
-//    //设置背景
-    imageView.backgroundColor=[UIColor greenColor];
+    //    UIImageView *imageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"picTest002"]];
+    //    imageView.center=CGPointMake(self.view.frame.size.width*0.5, self.view.frame.size.height*0.5);
+    //    //设置背景
+    //    imageView.backgroundColor=[UIColor greenColor];
+    imageView.backgroundColor=[UIColor colorWithRed:210/255.0 green:0/255.0 blue:0/255.0 alpha:0.5];
     //设置图片
     /*
      图片的两种存放位置：
@@ -73,54 +121,77 @@
      --3.不经常用，大批量的图片
      */
     //方式1:
-//    imageView.image=[UIImage imageNamed:@"picTest002"];
+    //    imageView.image=[UIImage imageNamed:@"picTest001"];
     //方式2:
     NSString *path=[[NSBundle mainBundle] pathForResource:@"picTest003" ofType:@"png"];
     imageView.image=[UIImage imageWithContentsOfFile:path];
     //设置内容模式
-//    imageView.contentMode=UIViewContentModeScaleAspectFill;
+    //    imageView.contentMode=UIViewContentModeScaleAspectFill;
     imageView.contentMode=UIViewContentModeScaleAspectFit;
-//    imageView.contentMode=UIViewContentModeScaleToFill;
-//    imageView.contentMode=UIViewContentModeRedraw;
+    //    imageView.contentMode=UIViewContentModeScaleToFill;
+    //    imageView.contentMode=UIViewContentModeRedraw;
     //是否裁剪多余部分
     imageView.clipsToBounds=YES;
     //加毛玻璃
-//    UIToolbar *toolBar=[[UIToolbar alloc]init];
-//    toolBar.frame=imageView.bounds;
-//    toolBar.barStyle=UIBarStyleBlack;
-//    toolBar.alpha=0.96;
-//    [imageView addSubview:toolBar];
+    //    UIToolbar *toolBar=[[UIToolbar alloc]init];
+    //    toolBar.frame=imageView.bounds;
+    //    toolBar.barStyle=UIBarStyleBlack;
+    //    toolBar.alpha=0.96;
+    //    [imageView addSubview:toolBar];
     //添加到控制器的view中
     [self.view addSubview:imageView];
+}
+
+-(void)addButton{
+    //创建
+    //设置按钮类型只能在初始化时设置
+    UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
+    //设置frame
+    button.frame=CGRectMake(80, 80, 200, 80);
+    //背景色
+    button.backgroundColor=[UIColor greenColor];
+    //设置文字
+    [button setTitle:@"普通按钮" forState:UIControlStateNormal];
+    [button setTitle:@"高亮按钮" forState:UIControlStateHighlighted];
+    //文字颜色
+    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    //文字字体
+    button.titleLabel.font =[UIFont systemFontOfSize:23];
+    //文字阴影
+    [button setTitleShadowColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitleShadowColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+//    button.titleLabel.shadowOffset=CGSizeMake(3, 3);
+    //设置内容图片
+    [button setImage:[UIImage imageNamed:@"picTest001"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"picTest002"] forState:UIControlStateHighlighted];
+    //设置背景图片
+    [button setBackgroundImage:[UIImage imageNamed:@"picTest003"] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:@"picTest004"] forState:UIControlStateHighlighted];
+    //按钮点击监听
+    [button addTarget:self action:@selector(testClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    //加载所有图片
-    NSMutableArray<UIImage *> *images=[NSMutableArray array];
-    for (int i=0; i<4; i++) {
-        NSString *imageName=[NSString stringWithFormat:@"picTest00%d",i+1];
-        UIImage *image=[UIImage imageNamed:imageName];
-        [images addObject:image];
-    }
-    self.images=images;
-    
-    //初始化音乐播放器
-//    NSString *musicPath=[[NSBundle mainBundle]pathForResource:@"mySong1.mp3" ofType:nil];
-//    NSLog(@"musicPath=%@",musicPath);
-//    NSURL *url=[NSURL fileURLWithPath:musicPath];
-    NSURL *url=[[NSBundle mainBundle]URLForResource:@"mySong1.mp3" withExtension:nil];
-    AVPlayerItem *playerItem=[[AVPlayerItem alloc]initWithURL:url];
-    self.player=[[AVPlayer alloc]initWithPlayerItem:playerItem];
+    [self.view addSubview:button];
+}
+
+-(void)testClick:(UIButton *)btn{
+    NSLog(@"点击了--%@",btn);
+    //获得按钮文字
+    NSString *title=[btn titleForState:UIControlStateNormal];
+    NSLog(@"按钮文字--%@",title);
+    //获得按钮文字颜色
+    UIColor *titleColor=[btn titleColorForState:UIControlStateHighlighted];
+    NSLog(@"按钮文字颜色--%@",titleColor);//RGBA
+    //获得按钮内部小图片
+    UIImage *image=[btn imageForState:UIControlStateNormal];
+    NSLog(@"按钮内部小图片--%@",image);
+    //获得按钮背景图片
+    UIImage *imageBack=[btn backgroundImageForState:UIControlStateNormal];
+    NSLog(@"按钮背景图片--%@",imageBack);
     
 }
 
-/**
- 1.系统调用
- 2.控制器收到内存警告时调用
- 3.去除一些不必要的内存占用，去除耗时的内存
- */
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
+
 - (IBAction)clickAnim {
     //1. 动画：
     //延迟执行startAnim
@@ -128,11 +199,11 @@
     
     //2. 播放音乐：
     [self.player play];
-    
-    
 }
 
-//设置帧动画
+/**
+ 设置帧动画
+ @param images 传入的图片数组 */
 -(void)startAnim:(NSMutableArray<UIImage *> *) images{
     //设置动画图片
     self.mImageView.animationImages=images;
@@ -143,19 +214,137 @@
     //播放
     [self.mImageView startAnimating];
 }
+
 - (IBAction)stopMusic {
     //暂停音乐
     [self.player pause];
-    [self.mImageView stopAnimating];
+//    [self.mImageView stopAnimating];
 }
+
 - (IBAction)changeMusic {
     //切换音乐
     NSURL *url=[[NSBundle mainBundle]URLForResource:@"mySong2.mp3" withExtension:nil];
     AVPlayerItem *playerItem=[[AVPlayerItem alloc]initWithURL:url];
     self.player=[[AVPlayer alloc]initWithPlayerItem:playerItem];
     [self.player play];
+}
+
+- (IBAction)translationAnim {
+    //方式一
+    /*
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:2.0];
+    CGRect frame=self.mImageView.frame;
+    frame.origin.y-=30;
+    self.mImageView.frame=frame;
+    [UIView commitAnimations];
+     */
+    //方式二
+    /*
+    [UIView animateWithDuration:1.0 animations:^{
+        CGRect frame=self.mImageView.frame;
+        frame.origin.y-=40;
+        self.mImageView.frame=frame;
+    }];
+     */
+    //方式三
+    /*
+    [UIView animateWithDuration:1.0 animations:^{
+        CGRect frame=self.mImageView.frame;
+        frame.origin.y-=40;
+        self.mImageView.frame=frame;
+    } completion:^(BOOL finished){
+        //动画完成后执行
+        self.mImageView.image=[UIImage imageNamed:@"picTest004"];
+    }];
+     */
+    //方式四
+    //options类似于android的动画插值器
+//    UIViewAnimationOptionCurveEaseIn 开始比较慢
+//    UIViewAnimationCurveEaseOut 结束比较慢
+//    UIViewAnimationOptionCurveEaseInOut 开始和结束较慢，中间较快
+//    UIViewAnimationCurveLinear 线性/匀速
+    
+    [UIView animateWithDuration:1.0 delay:3.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        CGRect frame=self.mImageView.frame;
+        frame.origin.y-=40;
+        self.mImageView.frame=frame;
+    } completion:^(BOOL finished){
+        //动画完成后执行
+        self.mImageView.image=[UIImage imageNamed:@"picTest004"];
+    }];
     
 }
+- (IBAction)scralAnim {
+    [UIView animateWithDuration:1.0 animations:^{
+        CGRect frame=self.mImageView.frame;
+        CGSize size=frame.size;
+        frame.size=CGSizeMake(size.width/5*4, size.height/5*4);
+        self.mImageView.frame=frame;
+    }];
+}
+- (IBAction)alphaAnim {
+    [UIView animateWithDuration:1.0 animations:^{
+        self.mImageView.alpha*=0.7;
+    }];
+}
+- (IBAction)addBgImg {
+    //重新设置尺寸
+    CGRect frame=self.mImageView.frame;
+    CGSize size=frame.size;
+    frame.size=CGSizeMake(size.width,size.width/4 );
+    self.mImageView.frame=frame;
+    //设置可以被拉伸填充的图片
+    UIImage *img=[UIImage imageNamed:@"bg2"];
+    CGFloat imgWidth=img.size.width;
+    CGFloat imgHeight=img.size.height;
+//    方式一
+    /*
+//    UIImage *resizeImg=[img resizableImageWithCapInsets:UIEdgeInsetsMake(imgHeight*0.5, imgWidth*0.5, imgHeight*0.5-1, imgWidth*0.5-1)];
+//    UIImageResizingModeTile 平铺
+//    UIImageResizingModeStretch 拉伸
+    UIImage *resizeImg=[img resizableImageWithCapInsets:UIEdgeInsetsMake(imgHeight*0.5, imgWidth*0.5, imgHeight*0.5-1, imgWidth*0.5-1) resizingMode:UIImageResizingModeTile];
+     */
+//    方式二
+    //right =imgWidth-left-1;
+    //bottom=imgHeight-top-1;
+    UIImage *resizeImg=[img stretchableImageWithLeftCapWidth:imgWidth*0.5 topCapHeight:imgHeight*0.5];
+    self.mImageView.image=resizeImg;
+    
+}
+- (IBAction)kvcClick:(UIButton *)btn {
+    //KVC赋值
+    /*
+     forKey & forKeyPath
+     1.forKeyPath包含了所有forKey的功能
+     2.forKeyPath进行内部的点语法，层层访问内部的属性
+     3.key值一定要在属性中找到
+     4.利用kvc修改类的私有成员变量
+     */
+//    [btn setValue:[UIColor redColor] forKey:@"backgroundColor"];
+    [btn setValue:[UIColor greenColor] forKeyPath:@"backgroundColor"];
+    
+    
+}
+- (IBAction)listenerClick:(UIButton *)btn {
+    //赋原值
+    [btn setValue:[UIColor greenColor] forKey:@"backgroundColor"];
+//    添加监听器
+    [btn addObserver:self forKeyPath:@"backgroundColor" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    //修改值
+     [btn setValue:[UIColor redColor] forKey:@"backgroundColor"];
+    //移除监听
+    [btn removeObserver:self forKeyPath:@"backgroundColor"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    NSLog(@"--------%@------%@--------%@",keyPath,object,change);
+}
+
+
+
+
+
 
 
 

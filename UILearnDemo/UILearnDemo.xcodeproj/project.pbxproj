@@ -17,11 +17,18 @@
 		4A39E0B7204804A4000AB384 /* Test002ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A39E0B1204804A3000AB384 /* Test002ViewController.m */; };
 		4A39E0B8204804A4000AB384 /* Test001.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A39E0B2204804A3000AB384 /* Test001.storyboard */; };
 		4A39E0B9204804A4000AB384 /* Test001ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A39E0B4204804A3000AB384 /* Test001ViewController.m */; };
+		4A40A454204E2D1E00C6A576 /* LJYShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40A453204E2D1E00C6A576 /* LJYShop.m */; };
+		4A40A457204E318900C6A576 /* LJYShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40A456204E318900C6A576 /* LJYShopView.m */; };
+		4A40A459204E3D1300C6A576 /* LJYShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40A458204E3D1300C6A576 /* LJYShopView.xib */; };
+		4A40A45C204E3DF500C6A576 /* LJYShopViewXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40A45B204E3DF500C6A576 /* LJYShopViewXib.m */; };
+		4A40A45F204E5F8D00C6A576 /* LJYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A40A45E204E5F8D00C6A576 /* LJYButton.m */; };
 		4A440D8920492B53004362A8 /* mySong3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D8620492B53004362A8 /* mySong3.mp3 */; };
 		4A440D8A20492B54004362A8 /* mySong2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D8720492B53004362A8 /* mySong2.mp3 */; };
 		4A440D8B20492B54004362A8 /* mySong1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D8820492B53004362A8 /* mySong1.mp3 */; };
 		4A440D9020492FA3004362A8 /* picTest004.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D8F20492FA3004362A8 /* picTest004.png */; };
 		4A440D9220492FE0004362A8 /* picTest003.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D9120492FE0004362A8 /* picTest003.png */; };
+		4AC24682204CE532005CBDC2 /* Test003.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC24681204CE532005CBDC2 /* Test003.storyboard */; };
+		4AC24685204CE597005CBDC2 /* Test003ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC24684204CE597005CBDC2 /* Test003ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,11 +48,23 @@
 		4A39E0B3204804A3000AB384 /* Test001ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test001ViewController.h; sourceTree = "<group>"; };
 		4A39E0B4204804A3000AB384 /* Test001ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test001ViewController.m; sourceTree = "<group>"; };
 		4A39E0B5204804A3000AB384 /* Test002ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test002ViewController.h; sourceTree = "<group>"; };
+		4A40A452204E2D1E00C6A576 /* LJYShop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJYShop.h; sourceTree = "<group>"; };
+		4A40A453204E2D1E00C6A576 /* LJYShop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJYShop.m; sourceTree = "<group>"; };
+		4A40A455204E318900C6A576 /* LJYShopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJYShopView.h; sourceTree = "<group>"; };
+		4A40A456204E318900C6A576 /* LJYShopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJYShopView.m; sourceTree = "<group>"; };
+		4A40A458204E3D1300C6A576 /* LJYShopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LJYShopView.xib; sourceTree = "<group>"; };
+		4A40A45A204E3DF500C6A576 /* LJYShopViewXib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJYShopViewXib.h; sourceTree = "<group>"; };
+		4A40A45B204E3DF500C6A576 /* LJYShopViewXib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJYShopViewXib.m; sourceTree = "<group>"; };
+		4A40A45D204E5F8D00C6A576 /* LJYButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJYButton.h; sourceTree = "<group>"; };
+		4A40A45E204E5F8D00C6A576 /* LJYButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJYButton.m; sourceTree = "<group>"; };
 		4A440D8620492B53004362A8 /* mySong3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mySong3.mp3; sourceTree = "<group>"; };
 		4A440D8720492B53004362A8 /* mySong2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mySong2.mp3; sourceTree = "<group>"; };
 		4A440D8820492B53004362A8 /* mySong1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mySong1.mp3; sourceTree = "<group>"; };
 		4A440D8F20492FA3004362A8 /* picTest004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picTest004.png; sourceTree = "<group>"; };
 		4A440D9120492FE0004362A8 /* picTest003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picTest003.png; sourceTree = "<group>"; };
+		4AC24681204CE532005CBDC2 /* Test003.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test003.storyboard; sourceTree = "<group>"; };
+		4AC24683204CE597005CBDC2 /* Test003ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test003ViewController.h; sourceTree = "<group>"; };
+		4AC24684204CE597005CBDC2 /* Test003ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test003ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +103,17 @@
 				4A39E0B0204804A3000AB384 /* Test002.storyboard */,
 				4A39E0B5204804A3000AB384 /* Test002ViewController.h */,
 				4A39E0B1204804A3000AB384 /* Test002ViewController.m */,
+				4AC24681204CE532005CBDC2 /* Test003.storyboard */,
+				4AC24683204CE597005CBDC2 /* Test003ViewController.h */,
+				4AC24684204CE597005CBDC2 /* Test003ViewController.m */,
+				4A40A452204E2D1E00C6A576 /* LJYShop.h */,
+				4A40A453204E2D1E00C6A576 /* LJYShop.m */,
+				4A40A455204E318900C6A576 /* LJYShopView.h */,
+				4A40A456204E318900C6A576 /* LJYShopView.m */,
+				4A40A45D204E5F8D00C6A576 /* LJYButton.h */,
+				4A40A45E204E5F8D00C6A576 /* LJYButton.m */,
+				4A40A45A204E3DF500C6A576 /* LJYShopViewXib.h */,
+				4A40A45B204E3DF500C6A576 /* LJYShopViewXib.m */,
 				4A39E09020480409000AB384 /* AppDelegate.h */,
 				4A39E09120480409000AB384 /* AppDelegate.m */,
 				4A39E09320480409000AB384 /* ViewController.h */,
@@ -95,6 +125,7 @@
 				4A440D8C20492BA2004362A8 /* 图片 */,
 				4A440D8520492B53004362A8 /* 音乐 */,
 				4A39E09F20480409000AB384 /* main.m */,
+				4A40A458204E3D1300C6A576 /* LJYShopView.xib */,
 			);
 			path = UILearnDemo;
 			sourceTree = "<group>";
@@ -144,6 +175,7 @@
 		4A39E08520480409000AB384 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LJY;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = LJY;
 				TargetAttributes = {
@@ -182,7 +214,9 @@
 				4A440D8B20492B54004362A8 /* mySong1.mp3 in Resources */,
 				4A39E0B8204804A4000AB384 /* Test001.storyboard in Resources */,
 				4A39E09A20480409000AB384 /* Assets.xcassets in Resources */,
+				4AC24682204CE532005CBDC2 /* Test003.storyboard in Resources */,
 				4A440D9020492FA3004362A8 /* picTest004.png in Resources */,
+				4A40A459204E3D1300C6A576 /* LJYShopView.xib in Resources */,
 				4A39E09820480409000AB384 /* Main.storyboard in Resources */,
 				4A440D8920492B53004362A8 /* mySong3.mp3 in Resources */,
 				4A39E0B6204804A4000AB384 /* Test002.storyboard in Resources */,
@@ -196,11 +230,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC24685204CE597005CBDC2 /* Test003ViewController.m in Sources */,
+				4A40A45F204E5F8D00C6A576 /* LJYButton.m in Sources */,
 				4A39E09520480409000AB384 /* ViewController.m in Sources */,
+				4A40A45C204E3DF500C6A576 /* LJYShopViewXib.m in Sources */,
 				4A39E0A020480409000AB384 /* main.m in Sources */,
 				4A39E09220480409000AB384 /* AppDelegate.m in Sources */,
+				4A40A457204E318900C6A576 /* LJYShopView.m in Sources */,
 				4A39E0B9204804A4000AB384 /* Test001ViewController.m in Sources */,
 				4A39E0B7204804A4000AB384 /* Test002ViewController.m in Sources */,
+				4A40A454204E2D1E00C6A576 /* LJYShop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
