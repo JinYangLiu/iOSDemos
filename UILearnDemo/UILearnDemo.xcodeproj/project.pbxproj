@@ -27,6 +27,8 @@
 		4A440D8B20492B54004362A8 /* mySong1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D8820492B53004362A8 /* mySong1.mp3 */; };
 		4A440D9020492FA3004362A8 /* picTest004.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D8F20492FA3004362A8 /* picTest004.png */; };
 		4A440D9220492FE0004362A8 /* picTest003.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A440D9120492FE0004362A8 /* picTest003.png */; };
+		4A80CD8B204E7DF800C4F1C1 /* Test004ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A80CD8A204E7DF800C4F1C1 /* Test004ViewController.m */; };
+		4A80CD8D204E7E4F00C4F1C1 /* Test004.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A80CD8C204E7E4F00C4F1C1 /* Test004.storyboard */; };
 		4AC24682204CE532005CBDC2 /* Test003.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC24681204CE532005CBDC2 /* Test003.storyboard */; };
 		4AC24685204CE597005CBDC2 /* Test003ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC24684204CE597005CBDC2 /* Test003ViewController.m */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,9 @@
 		4A440D8820492B53004362A8 /* mySong1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mySong1.mp3; sourceTree = "<group>"; };
 		4A440D8F20492FA3004362A8 /* picTest004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picTest004.png; sourceTree = "<group>"; };
 		4A440D9120492FE0004362A8 /* picTest003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picTest003.png; sourceTree = "<group>"; };
+		4A80CD89204E7DF800C4F1C1 /* Test004ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test004ViewController.h; sourceTree = "<group>"; };
+		4A80CD8A204E7DF800C4F1C1 /* Test004ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test004ViewController.m; sourceTree = "<group>"; };
+		4A80CD8C204E7E4F00C4F1C1 /* Test004.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test004.storyboard; sourceTree = "<group>"; };
 		4AC24681204CE532005CBDC2 /* Test003.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test003.storyboard; sourceTree = "<group>"; };
 		4AC24683204CE597005CBDC2 /* Test003ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test003ViewController.h; sourceTree = "<group>"; };
 		4AC24684204CE597005CBDC2 /* Test003ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test003ViewController.m; sourceTree = "<group>"; };
@@ -114,6 +119,9 @@
 				4A40A45E204E5F8D00C6A576 /* LJYButton.m */,
 				4A40A45A204E3DF500C6A576 /* LJYShopViewXib.h */,
 				4A40A45B204E3DF500C6A576 /* LJYShopViewXib.m */,
+				4A80CD8C204E7E4F00C4F1C1 /* Test004.storyboard */,
+				4A80CD89204E7DF800C4F1C1 /* Test004ViewController.h */,
+				4A80CD8A204E7DF800C4F1C1 /* Test004ViewController.m */,
 				4A39E09020480409000AB384 /* AppDelegate.h */,
 				4A39E09120480409000AB384 /* AppDelegate.m */,
 				4A39E09320480409000AB384 /* ViewController.h */,
@@ -213,6 +221,7 @@
 				4A39E09D20480409000AB384 /* LaunchScreen.storyboard in Resources */,
 				4A440D8B20492B54004362A8 /* mySong1.mp3 in Resources */,
 				4A39E0B8204804A4000AB384 /* Test001.storyboard in Resources */,
+				4A80CD8D204E7E4F00C4F1C1 /* Test004.storyboard in Resources */,
 				4A39E09A20480409000AB384 /* Assets.xcassets in Resources */,
 				4AC24682204CE532005CBDC2 /* Test003.storyboard in Resources */,
 				4A440D9020492FA3004362A8 /* picTest004.png in Resources */,
@@ -230,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A80CD8B204E7DF800C4F1C1 /* Test004ViewController.m in Sources */,
 				4AC24685204CE597005CBDC2 /* Test003ViewController.m in Sources */,
 				4A40A45F204E5F8D00C6A576 /* LJYButton.m in Sources */,
 				4A39E09520480409000AB384 /* ViewController.m in Sources */,

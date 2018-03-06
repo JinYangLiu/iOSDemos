@@ -96,12 +96,20 @@
                                     <action selector="listenerClick:" destination="EoF-dh-GqQ" eventType="touchUpInside" id="mJU-cg-OKg"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Omh-BF-dCN">
+                                <rect key="frame" x="67" y="231" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2Hy-JL-l9x"/>
                     </view>
                     <connections>
                         <outlet property="mImageView" destination="Nif-y4-15o" id="a3q-DD-8Cw"/>
+                        <outlet property="textFied" destination="Omh-BF-dCN" id="jKl-2X-nii"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A0v-vA-lpn" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,13 +9,15 @@
 #import "Test002ViewController.h"
 #import "AVFoundation/AVFoundation.h"
 
-@interface Test002ViewController ()
+@interface Test002ViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *mImageView;
 
 @property (nonatomic,strong)AVPlayer *player;
 
 @property(nonatomic,strong)NSArray *images;
+
+@property (weak, nonatomic) IBOutlet UITextField *textFied;
 
 @end
 
@@ -34,6 +36,8 @@
     [self addImageView];
    //UIButton的使用
     [self addButton];
+    
+    self.textFied.delegate=self ;
     
    
     
@@ -170,6 +174,11 @@
     [button setBackgroundImage:[UIImage imageNamed:@"picTest004"] forState:UIControlStateHighlighted];
     //按钮点击监听
     [button addTarget:self action:@selector(testClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //enabled才能达到UIControlStateDisabled状态
+//    button.enabled=NO;
+//    button.userInteractionEnabled=NO;
+    
     
     [self.view addSubview:button];
 }
@@ -341,8 +350,57 @@
     NSLog(@"--------%@------%@--------%@",keyPath,object,change);
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    // 退出键盘
+    //    [self.textFlied endEditing:YES];
+    // 辞去第一响应者(退出键盘)
+    //    [self.textFlied resignFirstResponder];
+    [self.view endEditing:YES];
+}
+
+#pragma mark - textFlied监听方法
+- (void)tfEditingDidBegin
+{
+    NSLog(@"开始编辑");
+}
+
+- (void)tfEditingDidEnd
+{
+    NSLog(@"结束编辑");
+}
+
+- (void)tfEditingChanged:(UITextField *)tf
+{
+    NSLog(@"%@",tf.text);
+}
+
+#pragma mark - UITextFieldDelegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    NSLog(@"开始编辑");
+}
 
 
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSLog(@"结束编辑");
+}
+
+/**
+ *  当textField文字改变就会调用这个方法
+ *  @param string    用户输入的文字
+ *
+ *  @return YES:允许用户输入;NO:禁止用户输入
+ */
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSLog(@"shouldChangeCharactersInRange--%@",string);
+    if ([string isEqualToString:@"1"]) {
+        return NO;
+    }
+    return YES;
+}
 
 
 
