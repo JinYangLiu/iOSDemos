@@ -12,6 +12,8 @@
 
 @interface Test005ViewController ()
 
+@property(nonatomic,weak) LJYPageView *pageView;
+
 @end
 
 @implementation Test005ViewController
@@ -23,8 +25,10 @@
     pageView.center=self.view.center;
     pageView.imageNames=@[@"picTest001",@"picTest002",@"picTest003",@"picTest004"];
     [self.view addSubview:pageView];
-    
-    
+    self.pageView=pageView;
+}
+- (IBAction)changeImg:(id)sender {
+    self.pageView.imageNames=@[@"bg",@"bg2",@"current",@"other"];
 }
 
 

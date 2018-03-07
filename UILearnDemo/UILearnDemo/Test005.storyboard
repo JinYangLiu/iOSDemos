@@ -17,13 +17,23 @@
                     <view key="view" contentMode="scaleToFill" id="bSK-Yt-mmD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr7-Rx-KsQ">
+                                <rect key="frame" x="83" y="596" width="208" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="切换轮播图片"/>
+                                <connections>
+                                    <action selector="changeImg:" destination="933-pH-xxC" eventType="touchUpInside" id="Puc-o9-M2l"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DUo-qu-M5c"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kb-zd-lm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="-88"/>
+            <point key="canvasLocation" x="168.80000000000001" y="-88.605697151424295"/>
         </scene>
     </scenes>
 </document>

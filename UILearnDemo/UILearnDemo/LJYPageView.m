@@ -41,7 +41,7 @@
 -(void)setImageNames:(NSArray *)imageNames{
     _imageNames=imageNames;
     //0.移除之前添加的
-//    [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     //1.创建并添加imageView
     CGFloat scrollViewWidth=self.scrollView.frame.size.width;
     CGFloat scrollViewHeight=self.scrollView.frame.size.height;
