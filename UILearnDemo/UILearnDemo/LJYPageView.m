@@ -50,6 +50,7 @@
         UIImageView *imageView=[[UIImageView alloc]init];
         imageView.image=[UIImage imageNamed:imageNames[i]];
         imageView.frame=CGRectMake(scrollViewWidth*i, 0, scrollViewWidth, scrollViewHeight);
+//        imageView.contentMode=UIViewContentModeScaleToFill;
         [self.scrollView addSubview:imageView];
     }
     //2.设置scrollView滚动范围
@@ -57,6 +58,17 @@
     //3.设置pageControl页数
     self.pageControl.numberOfPages=count;
     
+}
+
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    //获取当前控件尺寸
+    CGFloat width=self.frame.size.width;
+    CGFloat height=self.frame.size.height;
+    //设置子控件尺寸
+    self.scrollView.frame=CGRectMake(0, 0, width, height);
+    int pageControlHeight=self.pageControl.frame.size.height;
+    self.pageControl.frame=CGRectMake(0, height-pageControlHeight, width, pageControlHeight);
 }
 
 //开始定时任务
